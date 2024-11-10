@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookshop Homepage</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #fff2df;
+      margin: 0;
+      color: white;
+      font-family: "Courier New";
+    }
+
+    #navigation {
+      background-color: #D9AD9C;
+      padding: 10px;
+    }
+
+    #logo {
+      margin: 0;
+      width: 200px;
+      vertical-align: middle;
+    }
+
+    #taskbar {
+      list-style-type: none;
+      float: right;
+      padding: 0;
+      vertical-align: middle;
+    }
+
+    #taskbar li {
+      display: inline-block;
+      margin-right: 10px;
+      margin-left: 10px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    li a {
+      text-decoration: none;
+      color: white;
+    }
+    li a:hover {
+      text-decoration: underline;
+      font-size: 20px;
+    }
+    .body {
+      background-color: rgba(162, 131, 110, 0.5);
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 1200px;
+      border-radius: 20px;
+    }
+    #welcome-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #welcome-caption {
+      font-size: 24px;
+      color: black;
+      flex: 1;
+      margin-right: 20px;
+    }
+    #welcome-img {
+      width: 400px;
+      border-radius: 10px;
+    }
+    #extra-content {
+      background-color: #D9AD9C;
+      padding: 20px;
+      border-radius: 3px;
+      margin: 30px auto;
+      max-width: 1200px;
+    }
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      margin-top: 20px;
+      gap: 10px;
+    }
+    .carousel img {
+      width: 200px;
+      height: 300px;
+      border-radius: 10px;
+    }
+    .bestsellers {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .bestseller-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .bestseller-item img {
+      width: 200px;
+      height: 250px;
+      margin-left: 20px;
+      margin-right: 20px;
+      border-radius: 15px;
+      align-content: center;
+    }
+    .bestseller-item a{
+      display: flex;
+      flex-direction: row;
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      margin-top: 230px;
+    }
+    .bestseller-item div {
+      color: white;
+    }
+    @media only screen and (max-width: 768px) {
+    #navigation {
+      flex-direction: column;
+      align-items: center;
+    }
+    #logo {
+      width: 150px;
+    }
+    #taskbar {
+      float: none;
+      text-align: center;
+    }
+    #taskbar li {
+      margin-right: 0;
+      margin-left: 0;
+    }
+    .body {
+      padding: 10px;
+      margin: 10px auto;
+    }
+    #welcome-section {
+      flex-direction: column;
+      align-items: center;
+    }
+    #welcome-caption {
+      font-size: 18px;
+    }
+    #welcome-img {
+      width: 300px;
+    }
+    .bestsellers {
+      flex-direction: column;
+      align-items: center;
+    }
+    .bestseller-item {
+      flex-direction: column;
+      align-items: center;
+    }
+    .bestseller-item img {
+      width: 150px;
+      height: 200px;
+    }
+    .bestseller-item a{
+      flex: auto;
+      flex-direction: column;
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    #logo {
+      width: 100px;
+    }
+    #welcome-caption {
+      font-size: 14px;
+    }
+    #welcome-img {
+      width: 200px;
+    }
+    .bestseller-item img {
+      width: 100px;
+      height: 150px;
+    }
+    .bestseller-item a{
+      flex: auto;
+      flex-direction: column;
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  }
+  </style>
+</head>
+<body>
+  <div id="navigation">
+    <a href="HomePage.html"><img src="LOGO.png" id="logo" alt="Logo"></a>
+    <ul id="taskbar">
+          <li><a href="aboutus.html">About US </a></li>
+          <li><a href="mailto:contact@info.com">Contact US</a></li>
+          <li ><a href="items.php" target="_self">Shop</a></li>
+          <li><a href="cart.php" target="_self"><i class="fas fa-shopping-cart"></i></a></li>
+   </ul>
+ </div>
+  
+  <div class="body">
+    <div id="welcome-section">
+      <p id="welcome-caption">"The more that you read, the more things you will know. The more that you learn, the more places you'll go." - Dr. Seuss</p>
+      <img src="bodyIMG.jpg" id="welcome-img" alt="Welcome Image">
+    </div>
+  </div>  
+  <div class="body">
+    <h2 style="color: white;">Bestsellers :</h2>
+    <div class="bestsellers">
+      <div class="bestseller-item">
+        <img src="book6.jpg" alt="Bestseller 1">
+        <img src="book3.png" alt="Bestseller 2">
+        <img src="book2.jpg" alt="Bestseller 3">
+        <a href="items.php" class="">View More..</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
